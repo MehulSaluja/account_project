@@ -1,5 +1,9 @@
 package account_application;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Accounts {
 	String Fname;
 	String Lname;
@@ -11,6 +15,10 @@ public class Accounts {
 		
 		
 		// TODO Auto-generated constructor stub
+	}
+	Accounts()
+	{
+		
 	}
 
 	public String getFname() {
