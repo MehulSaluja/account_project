@@ -14,17 +14,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class service 
 {
+	static HashMap <Integer,Accounts> hashmap = new HashMap <Integer,Accounts>();
+	int count = 0;
 	
 		
 		public static void main(String[] args) 
 		{	
 			
-			Accounts a = new Accounts ("jo", "mario");
+			Accounts a = new Accounts ("jo", "mario", 2);
 			
 			
-			HashMap <Integer,Accounts> hashmap = new HashMap <Integer,Accounts>();
-			hashmap.put(1, new Accounts(a.getFname(),a.getLname()) );
-			System.out.println(hashmap.values());
+			
+			
+			
+			hashmap.put(1, new Accounts(a.getFname(),a.getLname(),a.getAccountnumber()) );
+			System.out.println(hashmap.keySet() + ""+hashmap.values());
 			
 			ObjectMapper mapper = new ObjectMapper();
 			
@@ -55,7 +59,26 @@ public class service
 			
 
 		}
+		
+		public void add_user(Accounts name1) 
+		{
+			this.hashmap.put(count, name1);
+			count++;
+			
+		}
 
+				public int get_firstname_counter (String name) 
+				{
+					int counter = 0;
+					for (Accounts check : hashmap.values() ) 
+					{
+						if (check.getFname().equals(name)) 
+						{
+							counter++;
+						}
+					}
+					return counter;
+				}
 
 	
 

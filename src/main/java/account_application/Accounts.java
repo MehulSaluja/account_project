@@ -9,9 +9,10 @@ public class Accounts {
 	String Lname;
 	int accountnumber;
 	
-	public Accounts(String first, String last) {
+	public Accounts(String first, String last, int accountNo) {
 		this.Fname=first;
 		this.Lname=last;
+		this.accountnumber=accountNo;
 		
 		
 		// TODO Auto-generated constructor stub
