@@ -34,7 +34,7 @@ public class TestTdd {
 		thisservice.add_user(a3);
 		
 
-        assertEquals (1,thisservice.get_firstname_counter("jo"));
+        assertEquals (2,thisservice.get_firstname_counter("jo"));
 	}
 
 }
