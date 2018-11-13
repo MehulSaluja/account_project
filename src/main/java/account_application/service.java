@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class service 
 {
 	static HashMap <Integer,Accounts> hashmap = new HashMap <Integer,Accounts>();
+	Accounts a = new Accounts ("jo", "mario", 2);
+
 	int count = 0;
 	
 		
@@ -79,6 +81,12 @@ public class service
 					}
 					return counter;
 				}
+				
+				
+		public int countNameByStream(String FName) 
+		{
+		return (int) hashmap.values().stream().filter(a -> a.getFname().equals(FName)).count();
+		}
 
 	
 
